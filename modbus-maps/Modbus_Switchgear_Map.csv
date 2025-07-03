@@ -1,0 +1,21 @@
+DeviceType,SlaveID,DataPoint,Register,RegisterType
+Switchgear,16,Breaker1 Status,0x0,floating point
+Switchgear,16,Breaker1 TripCnt,0x1,floating point
+Switchgear,16,Breaker1 Voltage,0x2,floating point
+Switchgear,16,Breaker1 Current,0x3,floating point
+Switchgear,16,Breaker2 Status,0x4,floating point
+Switchgear,16,Breaker2 TripCnt,0x5,floating point
+Switchgear,16,Breaker2 Voltage,0x6,floating point
+Switchgear,16,Breaker2 Current,0x7,floating point
+Switchgear,16,Breaker3 Status,0x8,floating point
+Switchgear,16,Breaker3 TripCnt,0x9,floating point
+Switchgear,16,Breaker3 Voltage,0xa,floating point
+Switchgear,16,Breaker3 Current,0xb,floating point
+Switchgear,16,Breaker4 Status,0xc,floating point
+Switchgear,16,Breaker4 TripCnt,0xd,floating point
+Switchgear,16,Breaker4 Voltage,0xe,floating point
+Switchgear,16,Breaker4 Current,0xf,floating point
+Switchgear,16,Breaker5 Status,0x10,floating point
+Switchgear,16,Breaker5 TripCnt,0x11,floating point
+Switchgear,16,Breaker5 Voltage,0x12,floating point
+Switchgear,16,Breaker5 Current,0x13,floating point
