@@ -85,6 +85,25 @@ You can explore or download the Modbus register maps and corresponding Ignition 
 > The Modbus map for the switchgear uses a **hexadecimal addressing scheme**, which is common in industrial PLC documentation.  
 > However, **Ignition requires addresses in decimal format**, so make sure to convert all hexadecimal values to decimal before using them in Ignition.
 
+## 🛠️ Ignition Designer Configuration
+
+The Ignition Designer is used to visualize and configure the imported Modbus tags for both motors and switchgear devices.
+
+These screenshots illustrate how the simulator data is brought to life within the Ignition Designer:
+
+<p align="center">
+  <img src="Ignition-Project/screenshots/Simulator_Designer.png" width="300"/>
+  <img src="Ignition-Project/screenshots/Simulator_Designer_Switchgear.png" width="300"/>
+  <img src="Ignition-Project/screenshots/UDT_Defination.png" width="300"/>
+</p>
+
+### Key Highlights:
+
+- **Tag Hierarchy**: Motors and breakers are organized into folders for structured access.
+- **Live Data Visualization**: Real-time values from the simulator are bound to components like labels and indicators.
+- **UDT Implementation**: Motors and breakers are created as User Defined Types (UDTs) to standardize tag structures and simplify scaling.
+
+These design elements help test Modbus tag behavior in a visual, scalable way inside Ignition.
 
 
 
