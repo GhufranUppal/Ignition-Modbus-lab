@@ -29,10 +29,12 @@ Once you start the simulator, the GUI allows you to:
 
 ### 🧪 Modbus Simulator Interface
 
+### 🧪 Modbus Simulator Interface
+
 <p align="center">
-  <img src="modbus-simulator/screenshots/modbus-simulator-ui-1.png" width="300"/>
-  <img src="modbus-simulator/screenshots/modbus-simulator-ui-2.png" width="300"/>
-  <img src="modbus-simulator/screenshots/modbus-simulator-ui-3.png" width="300"/>
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator.png" width="300"/>
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-1.png" width="300"/>
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-2.png" width="300"/>
 </p>
 
 These screenshots demonstrate the simulator in action:
