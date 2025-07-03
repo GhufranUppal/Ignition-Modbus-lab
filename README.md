@@ -112,7 +112,7 @@ This section shows how the Ignition Vision client is integrated with a custom Mo
 
 ### 🔴 Motor1 Stopped with Command Inputs
 
-![Motor1 Stopped](./Ignition-Project/screenshots/Motors_Designer_1.png)
+![Motor1 Stopped](./Ignition-Project/screenshots/Motors_Designer.png)
 
 ---
 
@@ -124,7 +124,7 @@ This section shows how the Ignition Vision client is integrated with a custom Mo
 
 ### 🟢 All Motors Running
 
-![All Motors Running](./Ignition-Project/screenshots/Motors_Designer_3.png)
+![All Motors Running](./Ignition-Project/screenshots/Motors_Designer_1.png)
 
 ---
 
