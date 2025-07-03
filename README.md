@@ -27,19 +27,20 @@ Once you start the simulator, the GUI allows you to:
 
 ### Screenshots
 
-**1. Initial launch**
+<p align="center">
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator.png" width="300"/>
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-1.png" width="300"/>
+  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-2.png" width="300"/>
+</p>
 
-![Startup](modbus-simulator/screenshots/Screenshot-Modbus-Simulator.png)
+These screenshots demonstrate the simulator in action:
 
-**2. Server started**
+- The TCP Modbus server is successfully launched and listening on the specified IP and port.
+- After issuing a motor **command** (Cmd = 1, HOA = 1 or 2), the motor transitions to **Running**.
+- Live updates are visible for:
+  - Motor parameters like speed setpoint (Sp), actual speed (ActSp), load, temperature, and runtime.
+  - Breaker electrical readings like **Status**, **Trip Count**, **Voltage**, and **Current**.
+- GUI refreshes at 1-second intervals, simulating realistic Modbus traffic.
 
-![Server Running](modbus-simulator/screenshots/Screenshot-Modbus-Simulator-1.png)
-
-**3. Live motor and breaker updates after command**
-
-![Live Update](modbus-simulator/screenshots/Screenshot-Modbus-Simulator-2.png)
-
-This screenshot shows real-time updates after sending a motor command:
-- The motor transitions to **Running**, with speed, load, and temperature values reflecting active behavior.
-- The **breaker status** and electrical parameters (trip count, voltage, current) also update periodically to simulate live field conditions.
+🔗 [View Simulator Source Code](modbus-simulator/Modbus_simulator.py)
 
