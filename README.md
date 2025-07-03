@@ -44,3 +44,25 @@ These screenshots demonstrate the simulator in action:
 
 🔗 [View Simulator Source Code](modbus-simulator/Modbus_simulator.py)
 
+## 🔌 Ignition Integration
+
+The Modbus Simulator is designed for seamless integration with the Ignition SCADA platform. Once the simulator is running, Ignition can connect using the Modbus TCP driver and map the motor and breaker registers to OPC tags.
+
+### Live Integration Examples
+
+<p align="center">
+  <img src="Ignition-project/screenshots/Screenshot 2025-07-02 162417-Ignition-OPC-Breaker.png" width="300"/>
+  <img src="Ignition-project/screenshots/Screenshot 2025-07-02 162417-Ignition-OPC-Breaker-1.png" width="300"/>
+  <img src="Ignition-project/screenshots/Screenshot 2025-07-02 162417-Ignition-OPC-Motor.png" width="300"/>
+  <img src="Ignition-project/screenshots/Screenshot 2025-07-02 162417-Ignition-OPC-Motor-1.png" width="300"/>
+</p>
+
+These screenshots show:
+- How Ignition maps simulated Modbus registers from motors and breakers into OPC tags.
+- Real-time tag values from Modbus devices.
+- Integration through OPC Quick Client for rapid testing and validation.
+
+You can import tag maps directly using the provided CSVs in the `modbus-maps` directory for motors and switchgear.
+
+> 📂 [modbus-maps/Ignition-import-motors.csv](modbus-maps/Ignition-import-motors.csv)  
+> 📂 [modbus-maps/Ignition_Import_Swichgear_Breaker.csv](modbus-maps/Ignition_Import_Swichgear_Breaker.csv)
