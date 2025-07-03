@@ -76,10 +76,16 @@ You can explore or download the Modbus register maps and corresponding Ignition 
   - [`Modbus_Motor_Map.csv`](modbus-maps/Modbus_Motor_Map.csv)
   - [`Modbus_Switchgear_Map.csv`](modbus-maps/Modbus_Switchgear_Map.csv)
 
-- 📥 **Ignition Import-Ready CSVs** (can be imported into Ignition via OPC tag browser):
+- 📥 **Ignition Import-Ready CSVs**  
+  (used to import tags through the **Ignition Gateway**):
   - [`Ignition-import-motors.csv`](modbus-maps/Ignition-import-motors.csv)
   - [`Ignition_Import_Switchgear_Breaker.csv`](modbus-maps/Ignition_Import_Switchgear_Breaker.csv)
 
 > 📝 **Note:**  
-> The Modbus map for the switchgear uses a hexadecimal addressing scheme, as commonly found in industrial PLCs. However, **Ignition requires all register addresses to be converted to decimal**. Make sure to convert the hexadecimal values before importing or referencing them inside Ignition.
+> The Modbus map for the switchgear uses a **hexadecimal addressing scheme**, which is common in industrial PLC documentation.  
+> However, **Ignition requires addresses in decimal format**, so make sure to convert all hexadecimal values to decimal before using them in Ignition.
+
+
+
+
 
