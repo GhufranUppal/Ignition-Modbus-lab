@@ -1,8 +1,10 @@
 # Ignition-Modbus-lab
 
-An educational Python-based Modbus TCP simulator designed for hobbyists, automation enthusiasts, and SCADA learners aiming to explore Ignition's Modbus integration capabilities. This interactive project provides a hands-on environment to test and understand how Modbus registers map into Ignition SCADA systems.
+## Overview
 
-The simulator, built using `PySimpleGUI` and `pymodbus`, includes dynamic data generation for motors and switchgear breakers, allowing learners to simulate realistic device behaviors, send commands, and visualize updates in real-time.
+This Python-based Modbus TCP simulator is designed for automation professionals, control engineers, and SCADA practitioners seeking to explore and validate Ignition’s Modbus integration. It provides a practical, hands-on environment to test how Modbus registers interface with Ignition SCADA systems.
+
+Developed using `pymodbus` and `PySimpleGUI`, the simulator features dynamic data generation for motors and switchgear breakers—allowing users to emulate real-world device behavior, issue control commands, and visualize system responses in real time through an intuitive graphical interface.
 
 ---
 
