@@ -27,10 +27,12 @@ Once you start the simulator, the GUI allows you to:
 
 ### Screenshots
 
+### 🧪 Modbus Simulator Interface
+
 <p align="center">
-  <img src="Ignition-Project/screenshots/ignition-opc-motor-tags.png" width="300"/>
-  <img src="Ignition-Project/screenshots/ignition-opc-motor-live-values.png" width="300"/>
-  <img src="Ignition-Project/screenshots/ignition-opc-breaker-overview.png" width="300"/>
+  <img src="modbus-simulator/screenshots/modbus-simulator-ui-1.png" width="300"/>
+  <img src="modbus-simulator/screenshots/modbus-simulator-ui-2.png" width="300"/>
+  <img src="modbus-simulator/screenshots/modbus-simulator-ui-3.png" width="300"/>
 </p>
 
 These screenshots demonstrate the simulator in action:
@@ -52,17 +54,19 @@ This section showcases how the Modbus simulator integrates with Ignition using O
 
 The simulator publishes motor and breaker data which is imported into Ignition using Modbus mapping. These tags are displayed in the OPC browser and update in real-time.
 
-### 🖼️ Screenshots
+### 📸 Screenshots
 
 <p align="center">
-  <img src="Ignition-project/screenshots/ignition-opc-motor-tags.png" width="300"/>
-  <img src="Ignition-project/screenshots/ignition-opc-motor-live-values.png" width="300"/>
-  <img src="Ignition-project/screenshots/ignition-opc-breaker-overview.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-motor-tags.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-motor-live-values.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-breaker-overview.png" width="300"/>
 </p>
 
-The screenshots show:
+These screenshots show:
+
 - OPC tag browser view with mapped Modbus addresses.
 - Real-time values for motor commands, status, and process variables.
 - Breaker electrical data including voltage, current, and trip count.
+
 
 
