@@ -28,9 +28,9 @@ Once you start the simulator, the GUI allows you to:
 ### Screenshots
 
 <p align="center">
-  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator.png" width="300"/>
-  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-1.png" width="300"/>
-  <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator-2.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-motor-tags.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-motor-live-values.png" width="300"/>
+  <img src="Ignition-Project/screenshots/ignition-opc-breaker-overview.png" width="300"/>
 </p>
 
 These screenshots demonstrate the simulator in action:
