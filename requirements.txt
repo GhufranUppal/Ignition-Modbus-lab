@@ -1,0 +1,2 @@
+pymodbus==3.5.3
+PySimpleGUI==4.60.5
