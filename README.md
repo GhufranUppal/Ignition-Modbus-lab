@@ -106,5 +106,35 @@ These screenshots illustrate how the simulator data is brought to life within th
 These design elements help test Modbus tag behavior in a visual, scalable way inside Ignition.
 
 
+## 🖥️ Motor Control UI with Ignition and Modbus TCP Simulator
+
+This section shows how the Ignition Vision client is integrated with a custom Modbus TCP simulator to visualize and control motor status in real time.
+
+### 🔁 Mixed Motor States (Running + Stopped)
+
+![Mixed Motor States](./Ignition-Project/screenshots/1207c352-e9a1-4521-af21-11c4aca7b534.png)
+
+---
+
+### 🟢 All Motors Running
+
+![All Motors Running](./Ignition-Project/screenshots/4aac2114-c490-44d8-ab57-9bfe305b51c6.png)
+
+---
+
+### 🔴 Motor1 Stopped with Command Inputs Shown
+
+![Motor1 Stopped](./Ignition-Project/screenshots/8ed5396b-7422-4b9a-837c-fa6cc459ec8d.png)
+
+---
+
+### 🔧 Description
+
+- Each motor UI component is bound to Modbus tags such as Amps, Cmd, Status, Trip, and HOA.
+- The Python-based Modbus simulator responds to commands and updates tag values.
+- Ignition automatically reflects state transitions: Stopped, Running, Tripped, etc.
+- This demonstrates live, bidirectional control using simulated Modbus devices.
+
+---
 
 
