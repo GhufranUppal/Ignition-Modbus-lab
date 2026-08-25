@@ -8,7 +8,70 @@
 
 This Python-based Modbus TCP simulator is designed for automation professionals, control engineers, and SCADA practitioners seeking to explore and validate Ignition’s Modbus integration. It provides a practical, hands-on environment to test how Modbus registers interface with Ignition SCADA systems.
 
-Developed using `pymodbus` and `PySimpleGUI`, the simulator features dynamic data generation for motors and switchgear breakers—allowing users to emulate real-world device behavior, issue control commands, and visualize system responses in real time through an intuitive graphical interface.
+The simulator features dynamic data generation for motors and switchgear breakers—allowing users to emulate real-world device behavior, issue control commands, and visualize system responses in real time through an intuitive graphical interface. Two front-ends are provided:
+
+- **Tkinter interface** (`Modbus_simulator_rev.1.py`) — **recommended**. Uses only Python's standard library plus `pymodbus`, so it runs anywhere with no extra GUI dependency.
+- **PySimpleGUI interface** (`Modbus_simulator.py`) — the original version. Requires `PySimpleGUI` (see [Getting Started](#-getting-started) for installation notes).
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Python 3.10+** ([download](https://www.python.org/downloads/))
+- **pip** (bundled with Python)
+- On Linux, ensure Tkinter is available: `sudo apt install python3-tk`
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/Ignition-Modbus-lab.git
+cd Ignition-Modbus-lab
+```
+
+### 2. Create and activate a virtual environment
+
+**Windows (PowerShell):**
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs `pymodbus`, which is all the recommended Tkinter simulator needs.
+
+### 4. Run the simulator
+
+**Recommended (Tkinter — no extra dependencies):**
+
+```bash
+python modbus-simulator/Modbus_simulator_rev.1.py
+```
+
+**Legacy PySimpleGUI version** (requires an extra install — PySimpleGUI 4.x is no longer on PyPI):
+
+```bash
+pip install --force-reinstall --extra-index-url https://PySimpleGUI.net/install PySimpleGUI
+python modbus-simulator/Modbus_simulator.py
+```
+
+Once the window opens, set the **IP/Port** (default `127.0.0.1:5020`), start the server, and begin
+issuing motor and breaker commands. To connect Ignition, point a Modbus/TCP device at the same
+IP and port and import the CSV maps described in [Modbus Maps and Ignition Import](#-modbus-maps-and-ignition-import).
 
 ---
 
@@ -31,9 +94,7 @@ Once you start the simulator, the GUI allows you to:
 3. Set breaker states (1 or 0).
 4. Monitor all values updated periodically in the interface.
 
-### Screenshots
-
-### 🧪 Modbus Simulator Interface
+### 🧪 Modbus Simulator Interface (PySimpleGUI)
 
 <p align="center">
   <img src="modbus-simulator/screenshots/Screenshot-Modbus-Simulator.png" width="300"/>
@@ -140,5 +201,35 @@ This section shows how the Ignition Vision client is integrated with a custom Mo
 - A custom Modbus TCP simulator written in Python is used to send commands and simulate states.
 - Ignition Vision provides live feedback and dynamic color changes to show current motor conditions.
 - This setup demonstrates full-loop control simulation using Ignition and Modbus TCP.
+
+---
+
+## 🐍 Tkinter Simulator Implementation
+
+In addition to the `PySimpleGUI` version, a revised simulator built entirely with Python's
+standard-library **Tkinter** toolkit is available in
+[`Modbus_simulator_rev.1.py`](modbus-simulator/Modbus_simulator_rev.1.py). Because Tkinter ships
+with Python, this version runs without any additional GUI dependency and remains cross-platform.
+
+### 📸 Screenshot
+
+<p align="center">
+  <img src="modbus-simulator/screenshots/SimulatorImplementationTtinker.png" width="500"/>
+</p>
+
+### Highlights
+
+- **Server panel** – Configure the target **IP** and **Port** (default `127.0.0.1:5020`) and start
+  the Modbus TCP server directly from the interface.
+- **Motor Commands** – Select a motor by **ID (1–5)** and issue `Cmd`, `Sp` (setpoint), and `HOA`
+  values with a single **Send Motor Cmd** button.
+- **Breaker Commands** – Set any breaker **ID (1–5)** to a **Status (0/1)** using **Set Breaker**.
+- **Live Data table** – A continuously refreshing view that shows each point's **Raw** register
+  value alongside a **Human**-readable interpretation (e.g. `Running`, `77%`, `91°C`, `Hand`).
+- **No extra dependencies** – Uses only `tkinter` and `pymodbus`, with compatibility shims for both
+  pymodbus 2.x and 3.x APIs.
+
+The screenshot above shows Motor 1 running (Cmd = 1, HOA = Hand) with live load, temperature, amps,
+and runtime values updating in real time while Motor 2 remains stopped.
 
 ---

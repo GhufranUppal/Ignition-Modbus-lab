@@ -1,2 +1,9 @@
+# Core dependency (required by both simulators)
 pymodbus==3.5.3
-PySimpleGUI==4.60.5
+
+# Optional: only needed for the legacy PySimpleGUI interface (Modbus_simulator.py).
+# NOTE: PySimpleGUI 4.60.5 is no longer distributed on PyPI. If you need the
+# PySimpleGUI version, install it from the maintainer's server:
+#   pip install --force-reinstall --extra-index-url https://PySimpleGUI.net/install PySimpleGUI
+# The recommended Tkinter interface (Modbus_simulator_rev.1.py) needs no extra GUI package.
+# PySimpleGUI==4.60.5
