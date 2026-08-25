@@ -233,3 +233,29 @@ The screenshot above shows Motor 1 running (Cmd = 1, HOA = Hand) with live load,
 and runtime values updating in real time while Motor 2 remains stopped.
 
 ---
+
+## 💾 Ignition Backup
+
+A ready-made Ignition gateway backup is included in
+[`Ignition-Project/Ignition-backups/`](Ignition-Project/Ignition-backups/) so you can reproduce the
+reference setup instead of building it from scratch. Restore the `.gwbk` from the Ignition Gateway
+web interface (**Config → System → Backup/Restore → Restore**). After restoring, sign in to the
+gateway with:
+
+| Field    | Value     |
+| -------- | --------- |
+| Username | `gUppal`  |
+| Password | `1234567` |
+
+> 📝 **Note:** These are demo credentials for a local test gateway only. Change them before exposing
+> the gateway on any shared or production network.
+
+After importing the CSV files, each tag is mapped to its Modbus register from the Ignition Gateway
+under **Config → OPC UA → Device Connections → Addresses**. The screenshot below shows the motor
+addresses configured in Ignition, listing the **Prefix**, **Start/End** register range, **Step**,
+**Unit ID**, **Modbus Type** (Holding Register / Int16), and the resulting **Modbus Address** for
+each point.
+
+<p align="center">
+  <img src="Ignition-Project/screenshots/Ignition_Addresses.png" width="600"/>
+</p>
