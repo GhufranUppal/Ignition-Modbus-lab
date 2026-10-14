@@ -234,7 +234,40 @@ and runtime values updating in real time while Motor 2 remains stopped.
 
 ---
 
-## 💾 Ignition Backup
+## �️ Ignition Perspective Implementation
+
+A web-based HMI built in **Ignition Perspective** visualizes the same Modbus motor data in the
+browser (`localhost:8088`). Each motor component provides **Hand / Off / Auto (HOA)** controls, a
+live **Amps** readout, and an animated motor graphic whose color reflects the current state
+(yellow = Hand/idle, green = Auto/running, red = Off/tripped). Commands sent from the Perspective
+session flow back to the Python Modbus TCP simulator, and the simulator's live values drive the
+component display in real time.
+
+Two layouts are included: a **Small View** that pages through individual motors in a carousel, and a
+**Large View** that shows multiple motors side by side.
+
+### 📸 Screenshots
+
+<p align="center">
+  <img src="Ignition-Project/Perspective/Motor_Small_View_3.png" width="600"/>
+</p>
+
+<p align="center">
+  <img src="Ignition-Project/Perspective/Motor_Small_View_1.png" width="300"/>
+  <img src="Ignition-Project/Perspective/2Motor_Small_View_2.png" width="300"/>
+</p>
+
+<p align="center">
+  <img src="Ignition-Project/Perspective/Motor_Large_View_1.png" width="600"/>
+</p>
+
+The Small View shows a single motor with its HOA selector, Amps gauge, and animated graphic changing
+color between **Hand** (yellow), **Auto** (green), and **Off** (red). The Large View presents several
+motors at once for an at-a-glance overview, all fed by the live Modbus TCP simulator.
+
+---
+
+## �💾 Ignition Backup
 
 A ready-made Ignition gateway backup is included in
 [`Ignition-Project/Ignition-backups/`](Ignition-Project/Ignition-backups/) so you can reproduce the
